@@ -44,6 +44,11 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@activity('read list of source tables').output.value",
+						"type": "Expression"
+					},
+					"isSequential": false,
 					"activities": [
 						{
 							"name": "ingest from source_2_silver",
