@@ -238,8 +238,7 @@
 		],
 		"parameters": {
 			"table_id": {
-				"type": "int",
-				"defaultValue": 1
+				"type": "int"
 			},
 			"adf_iterator": {
 				"type": "string"
