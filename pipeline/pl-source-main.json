@@ -169,6 +169,8 @@
 				"type": "Integer"
 			}
 		},
-		"annotations": []
-	}
+		"annotations": [],
+		"lastPublishTime": "2026-10-21T19:13:21Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
 }

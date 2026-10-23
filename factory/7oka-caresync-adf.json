@@ -1,0 +1,15 @@
+{
+	"name": "7oka-caresync-adf",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b9aea13f-604a-44cb-a766-6c6bb0e3497d",
+		"tenantId": "86d689c3-6989-45a7-9169-77ae9c453ab0"
+	}
+}
