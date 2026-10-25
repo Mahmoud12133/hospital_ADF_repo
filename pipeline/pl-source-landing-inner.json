@@ -80,6 +80,10 @@
 						"Source_system": {
 							"value": "@activity('read table details from table config').output.firstRow.source_system",
 							"type": "Expression"
+						},
+						"Source_file_format": {
+							"value": "@coalesce(activity('read table details from table config').output.firstRow.Source_file_format,'')",
+							"type": "Expression"
 						}
 					}
 				},
@@ -250,7 +254,7 @@
 				}
 			},
 			{
-				"name": "If Condition1_copy1",
+				"name": "update watermark",
 				"type": "IfCondition",
 				"dependsOn": [
 					{
@@ -429,7 +433,8 @@
 												"folder": {
 													"value": "@activity('read table details from table config').output.firstRow.source_path",
 													"type": "Expression"
-												}
+												},
+												"container": "source"
 											}
 										}
 									],
@@ -438,6 +443,10 @@
 											"referenceName": "Binary1",
 											"type": "DatasetReference",
 											"parameters": {
+												"folder": {
+													"value": "@concat(\n    activity('read table details from table config').output.firstRow.source_system,\n    '/',\n    activity('read table details from table config').output.firstRow.source_table_name,\n    '/',\n    variables('start_time')\n)",
+													"type": "Expression"
+												},
 												"container": "container"
 											}
 										}
